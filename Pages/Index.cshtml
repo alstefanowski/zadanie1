@@ -3,8 +3,13 @@
 @{
     ViewData["Title"] = "Home page";
 }
+<h1 class="display-4"></h1>
+<span asp-validation-for="FizzBuzz.Number" class="text-danger"></span>
 
-<div class="text-center">
-    <h1 class="display-4">Cześć</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<form method="post">
+    <label asp-for="FizzBuzz.Number"></label>
+    <input asp-for="FizzBuzz.Number" /><br />
+    <button type="submit">Zatwierdź</button>
+</form>
+
+

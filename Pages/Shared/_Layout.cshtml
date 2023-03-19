@@ -32,6 +32,30 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
+            @if (TempData[Constants.Fizz] != null)
+            {
+                <div class="alert alert-success" role="alert">
+                    @Html.Raw(@TempData[Constants.Fizz])
+                </div>
+            }
+            @if (TempData[Constants.Buzz] != null)
+            {
+                <div class="alert alert-danger" role="alert">
+                    @Html.Raw(@TempData[Constants. Buzz])
+                </div>
+            }
+            @if (TempData[Constants.FizzBuzz] != null)
+            {
+                <div class="alert alert-warning" role="alert">
+                    @Html.Raw(@TempData[Constants.FizzBuzz])
+                </div>
+            }
+            @if(TempData[Constants.Other] != null)
+            {
+                <div class = "alert alert-info" role="alert">
+                    @Html.Raw(TempData[Constants.Other])
+                </div>
+            }
             @RenderBody()
         </main>
     </div>
